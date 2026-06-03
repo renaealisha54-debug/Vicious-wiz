@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 227 44% 6%;
+    --foreground: 0 0% 100%;
+    --card: 227 44% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 227 44% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 227 44% 15%;
+    --muted-foreground: 227 20% 70%;
+    --accent: 45 93% 47%;
+    --accent-foreground: 227 44% 6%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 227 44% 20%;
+    --input: 227 44% 20%;
+    --ring: 263 83% 58%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-primary/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.vicious-card {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+}
+
+.glowing-shadow-violet {
+  filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.6));
+}
+
+.glowing-shadow-pink {
+  filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.6));
+}
+
+.glowing-text-gold {
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.gradient-header {
+  @apply bg-gradient-to-r from-[#7c3aed] via-[#ec4899] to-[#fbbf24] bg-clip-text text-transparent;
+}
